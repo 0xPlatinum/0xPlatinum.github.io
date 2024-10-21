@@ -1,6 +1,5 @@
-# 0xPlatinum.github.io
-
 <!DOCTYPE html>
+# 0xPlatinum.github.io
 <html>
     <head>
     <title>Christians Portfolio</title>
