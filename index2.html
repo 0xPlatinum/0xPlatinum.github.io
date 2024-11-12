@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kode%20Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unica%20One">
     <title>Christians Portfolio</title>
     <style>
+        /*  Notes for how to select different things in an HTML documents
+
+    NEVER USE THE UNIVERSAL SELECTOR IF YOU ARE USING DIFFERENT COLORS, OR FONTS
+    the universal selector sets the DEFAULT behavior for CSS.
+
+    * {
+
+
+    }
+
+        element selectors
+
+        element {
+            property: value;
+        }
+
+        id selectors
+        #id-name{
+            property: value;
+        }
+
+        class selectors
+        .class-name {
+            property: value;
+
+        }
+
+        descendent OR CHILDREN selectors
+
+        parent-selector > child-selector
+
+        {
+            property: value;
+        }
+
+        pseduoclass selector
+        list of types of pseudoclasses: https://www.w3schools.com/css/css_pseudo_classes.asp
+
+        element,id,class:STATE {
+            property: value;
+        }
+
+       element,id,class::TYPE{
+
+            property: value;
+
+       }
+
+
+
+
+    */
         body {
-            background-color: black;
-            font-family: Arial;
+            background-color:black;
+            background: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3zafZhSFE0w/v0/-999x-999.gif') rgba(255, 255, 255, 1); fixed;
+            background-size: cover;
+            font-family: 'Kode Mono';
             font-size:20px;
+            opacity:1;
             letter-spacing:2px;
             white-space: nowrap;
+            animation: fadeintroin 1s ease-in 0s 1 alternate none;
+            z-index: -9999;
         }
         a {
             color:white;
@@ -19,17 +79,194 @@
         #introduction, #info-about-me, #goal, #about-me, #goals, #links, #images {
         text-align:center;
         }
-        h1,h2,h3,h4{ text-align:center; }
+         .introduction {
+        border: 5px dotted #4ac29a;
+        border-radius: 50px;
+        padding: 20px;
+        margin: 30px auto;
+        max-width: 80%;
+        width: fit-content;
+        background-color: rgba(0,0,0,0.6);
+        bottom:60%;
+        font-family: 'Unica One';
+          font-style: normal;
+          font-weight: 400;
+          src: url(https://fonts.gstatic.com/s/ubuntumono/v17/KFOjCneDtsqEr0keqCMhbCc3CsTKlA.woff2) format('woff2');
+          unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+
+
+        height:100%;
+        bottom:100%;
+        left:7%;
+        z-index: 1;
+
+    }
+    @keyframes fadeintroin {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+                50% {
+                    opacity:0.5
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        h1,h2,h3,h4{ text-align:center;
+        border-radius: 45px 45px 50px 50px;
+        }
         #personal-form {
-         width:300px;
+         width:fit-content;
          height:auto;
          padding:10px;
          margin: auto;
          border: 1px solid white;
         }
+        .column1 {
+        background-color: #b09048;
+        opacity: 0.1;
+        background-image:  linear-gradient(30deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(150deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(30deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(150deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(60deg, #393d9877 25%, transparent 25.5%, transparent 75%, #393d9877 75%, #393d9877), linear-gradient(60deg, #393d9877 25%, transparent 25.5%, transparent 75%, #393d9877 75%, #393d9877);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+        position:absolute;
+
+        border-radius: 0px 45px 45px 0px;
+        padding: 20px;
+        bottom:40px;
+
+
+        height:190%;
+        width:10%;
+        bottom:1%;
+        top:0.4%;
+        right:88%;
+        z-index:2;
+        }
+        .column2 {
+        background-color: #b09048;
+        opacity: 0.1;
+        background-image:  linear-gradient(30deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(150deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(30deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(150deg, #393d98 12%, transparent 12.5%, transparent 87%, #393d98 87.5%, #393d98), linear-gradient(60deg, #393d9877 25%, transparent 25.5%, transparent 75%, #393d9877 75%, #393d9877), linear-gradient(60deg, #393d9877 25%, transparent 25.5%, transparent 75%, #393d9877 75%, #393d9877);
+        background-size: 80px 140px;
+        background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+        position:absolute;
+
+        border-radius: 45px 0px 0px 45px;
+        padding: 20px;
+        bottom:40px;
+
+
+        height:190%;
+        width:10%;
+        bottom:1%;
+        top:0.4%;
+        left:88%;
+        z-index:2;
+        }
+        .about-me, .links{
+        animation:backslideleft 1s ease-in 0s 1 alternate none,  bubble-float 4s ease-in-out infinite;
+        animation-delay: 0s, 2s; /* Delay the second animation (slideIn) */
+        animation-duration: 2s, 2s; /* Both animations have the same duration */
+        animation-timing-function: ease-in-out, ease-in-out;
+
+        }
+        .goals, .images {
+        animation: backslideright 1s ease-in 0s 1 alternate none,  bubble-float 4s ease-in-out infinite;
+        animation-delay: 0s, 2s; /* Delay the second animation (slideIn) */
+        animation-duration: 2s, 2s; /* Both animations have the same duration */
+        animation-timing-function: ease-in-out, ease-in-out;
+
+        }
+        .onHoverLinks:hover{
+        animation: bounce 1s ease-in 0s 1 alternate none;
+
+        }
+        @keyframes bounce {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+        .about-me, .goals, .links, .images {
+        position: relative;
+        border: 5px dotted #4ac29a;
+        border-radius: 50px;
+        padding: 20px;
+        margin: 30px auto;
+        max-width: 80%;
+        width: fit-content;
+        background-color: rgba(0,0,0,1);
+        font-family: 'Kode Mono';
+
+
+        z-index: 10;
+    }
+    @keyframes backslideright {
+	0% {
+		opacity: 0;
+		transform: rotateY(70deg);
+		transform-origin: right;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateY(0);
+		transform-origin: right;
+	}
+}
+    @keyframes backslideleft {
+        0% {
+            opacity: 0;
+            transform: rotateY(-70deg);
+            transform-origin: left;
+        }
+
+        100% {
+            opacity: 1;
+            transform: rotateY(0);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes bubble-float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
     </style>
 </head>
 <body>
+<section class="column1" id="column1"></section>
+<section class="column2" id="column2"></section>
 <section class="introduction" id="introduction">
     <h1>
         Welcome to my portfolio HTML page.
@@ -55,25 +292,27 @@
         <br>I have been applying like crazy to any internships I could get my hands on.
     </p>
 </section>
+<div class="onHoverLinks">
 <section class="links" id="links">
     <nav>
         <a href="https://github.com/0xPlatinum/Unforgotten-Bits"  target="_blank">This is my favorite writeup I've done on my github</a>
-        <br><a href="/index.html"> Click here to load original styling</a>
+        <br><br><a href="/personal.html"> Communitys I'm involved in</a>
     </nav>
 </section>
+</div>
 <section class="images" id="images">
-    <p>Heres my favorite type of cat, a Maine Coon, look at all that fluff!</p>
-    <img alt="Cat image" src="https://images.squarespace-cdn.com/content/v1/5c6245b42727be14c54eceb9/1639623856512-ZLGHQT14QVB2R5BAY5DM/7+Giant+Facts+about+Maine+Coon+cats" style="width:500px;height:600px;">
+    <p>Remember to stay on right side and Hack The Planet.</p>
+    <img alt="Hack The Planet image" src="https://64.media.tumblr.com/1f8e23b2ff00dc1d71437b7c5a23aff3/tumblr_nxd7qnGF8K1rat0tqo1_500.gif" style="width:500px;height:600px;">
     </section>
     <section class="forms">
         <div id="personal-form">
             <form>
                 <label for="fname">First Name</label>
 
-                <input type="text" id="fname" name="firstname" placeholder="Please enter your first name.">
+                <input type="text" id="fname" name="firstname" placeholder="Enter your first name.">
                 <br>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Please enter your last name.">
+                <label for="lname">Last Name&#10240;</label>
+                <input type="text" id="lname" name="lastname" placeholder="Enter your last name.">
                 <br> <input type="submit" value="Submit" style="text-align: center;">
             </form>
         </div>
