@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kode%20Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unica%20One">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <script src="./calc.js" type="text/javascript"></script>
+    <title>Christians Portfolio</title>
+    <style>
+        /*  Notes for how to select different things in an HTML documents
+
+    NEVER USE THE UNIVERSAL SELECTOR IF YOU ARE USING DIFFERENT COLORS, OR FONTS
+    the universal selector sets the DEFAULT behavior for CSS.
+
+    * {
+
+
+    }
+
+        element selectors
+
+        element {
+            property: value;
+        }
+
+        id selectors
+        #id-name{
+            property: value;
+        }
+
+        class selectors
+        .class-name {
+            property: value;
+
+        }
+
+        descendent OR CHILDREN selectors
+
+        parent-selector > child-selector
+
+        {
+            property: value;
+        }
+
+        pseduoclass selector
+        list of types of pseudoclasses: https://www.w3schools.com/css/css_pseudo_classes.asp
+
+        element,id,class:STATE {
+            property: value;
+        }
+
+       element,id,class::TYPE{
+
+            property: value;
+
+       }
+
+
+
+
+    */
+        body {
+            background-color:black;
+            background: url('https://miro.medium.com/v2/resize:fit:2000/1*c4gFMdip5olKt3yOvipiEQ.gif') rgba(255, 255, 255, 1); fixed;
+            background-size: cover;
+            font-family: 'Kode Mono';
+            font-size:20px;
+            opacity:1;
+            letter-spacing:2px;
+            white-space: nowrap;
+            animation: fadeintroin 1s ease-in 0s 1 alternate none;
+            z-index: -9999;
+        }
+
+      h1,h2,h3,h4{
+      text-align:center;
+            border-radius: 45px 45px 50px 50px;
+            border: 5px dotted #4ac29a;
+            border-radius: 50px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 80%;
+            width: fit-content;
+            background-color: rgba(0,255,255,0.6);
+            }
+        .flex-container {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        }
+        .flex-container > div {
+        border-radius: 45px 45px 50px 50px;
+            border-radius: 45px 45px 50px 50px;
+            border: 5px dotted #4ac29a;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: rgba(0,255,255,0.6);
+            width: 30%;
+            text-align: center;
+            gap: 10px;
+            animation: swirlin 1s ease-in 0s 1 alternate none;
+
+        }
+        img {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        animation: scalein 1s ease-in 0s 1 alternate none;
+    }
+    @keyframes scalein {
+        0% {
+            transform: scale(0);
+            transform-origin: 50% 100%;
+        }
+
+        100% {
+            transform: scale(1);
+            transform-origin: 50% 100%;
+        }
+    }
+
+    img:hover {
+        opacity: 1; /* 50% opacity when hovered */
+    }
+        .introduction {
+        animation: swirlin 1s ease-in 0s 1 alternate none;
+        }
+        @keyframes swirlin {
+        0% {
+            opacity: 0;
+            transform: rotate(-540deg) scale(2);
+        }
+
+        100% {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+    }
+      h2 {
+        text-align:right
+        }
+
+        .calculator {
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+        }
+
+    </style>
+</head>
+<body>
+<h1> Small Calculator App!</h1>
+<div class="calculator">
+    <table>
+        <tr>
+            <td colspan="3"> <input type="text" id="result" class="screen" style="text-align: right;"></td>
+            <td><input type="button" value="C" onclick="clearscreen()" class="clear"></td>
+
+        </tr>
+
+    </table>
+    <div class="keys">
+        <input type="button" value="7" class="button" onClick="display('7')">
+
+        <input type="button" value="8" class="button " onClick="display('8')">
+
+        <input type="button" value="9" class="button" onClick="display('9')">
+
+        <input type="button" value="/" class="operator" onClick="display('/')">
+        <br>
+
+        <input type="button" value="4" class="button" onClick="display('4')">
+
+        <input type="button" value="5" class="button" onClick="display('5')">
+
+        <input type="button" value="6" class="button" onClick="display('6')">
+
+        <input type="button" value="*" class="operator" onClick="display('*')">
+        <br>
+
+        <input type="button" value="1" class="button" onClick="display('1')">
+
+        <input type="button" value="2" class="button" onClick="display('2')">
+
+        <input type="button" value="3" class="button" onClick="display('3')">
+
+        <input type="button" value="-" class="operator" onClick="display('-')">
+        <br>
+
+        <input type="button" value="0" class="button" onClick="display('0')">
+
+        <input type="button" value="." class="button" onClick="display('.')">
+
+        <input type="button" value= "=" class="button equal-sign" onClick="calc()">
+
+        <input type="button" value="+" class="operator" onClick="display('+')">
+    </div>
+</div>
+</body>
+
+</html>
